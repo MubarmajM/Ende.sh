@@ -4,7 +4,7 @@
 A Bash Script for Encoding/Decoding strings.
 
 
-
+![Ende.sh Icon](icon.png)
 
 ## Installation
 
