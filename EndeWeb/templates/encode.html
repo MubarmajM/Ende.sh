@@ -5,14 +5,17 @@
     <title>EndeWeb</title>
     <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="icon" type="image/png" href="../static/img/favicon.ico">
+    <script src="../static/js/copy.js"></script>
 </head>
 <body>
     <h1>EndeWeb Encode Result</h1>
+    <div class="outputos">
     <p>Encoding Type: {{ encoding_type }}</p>
     <p>Input Data: {{ data }}</p>
-    <p>Encoded Result: {{ encoding_result }}</p>
+    <p>Encoded Result: <span id="encoded-result">{{ encoding_result }}</span></p>
+    </div>
     <br><br>
-    
+    <p><button onclick="copy('encoded-result')">Copy Result</button></p>
     <p><a class="zeplin" href="/">Back to Home</a></p>
 </body>
 </html>

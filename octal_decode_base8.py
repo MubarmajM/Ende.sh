@@ -57,11 +57,11 @@ if __name__ == "__main__":
     if args.encode:
         result = octal_encode_base8(args.octal_string, args.o)
 
-        print(f"Encoded String: {result}")
+        print(f"{result}")
 
     elif args.decode:
     
         
         result = octal_decode_base8(args.octal_string)
-        print(f"Decoded String: {result}") 
+        print(f"{result}") 
 

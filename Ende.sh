@@ -43,13 +43,14 @@ case $flag in
         binary)
         string=$3
 
-        echo "$3" | fold -w8 | while read byte; do printf "\\x$(printf '%x' $((2#$byte)))"; done; echo
+        python3 -c "''.join(chr(int(b, 2)) for b in '$3'.split())"
+
 
         ;;
         octal|base8)
         string=$3
 
-        python3 octal_decode_base8.py -d "$3"
+        python3 /home/yusa/nethack/mytools/Ende.sh/octal_decode_base8.py -d "$3"
 
         ;;
         hex|base16)
@@ -91,13 +92,15 @@ case $flag in
         binary)
         string=$3
 
-        echo -n "$3" | xxd -b -c 1 | cut -c 10- | tr -d '\n'
+        python3 -c "print(' '.join(f'{ord(c):08b}' for c in '$3'))"
+
+
 
         ;;
         octal|base8)
         string=$3
 
-        python3 octal_decode_base8.py -e "$3"
+        python3 /home/yusa/nethack/mytools/Ende.sh/octal_decode_base8.py -e "$3"
 
         ;;
         hex|base16)
