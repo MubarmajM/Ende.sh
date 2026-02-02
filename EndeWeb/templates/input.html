@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EndeWeb</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" type="image/png" href="../static/img/favicon.ico">
+</head>
+<body>
+    <h1>EndeWeb Input Page</h1>
+    <p class="endebox1">Please enter the text you want to {{ action }}.</p>
+
+    <form action="/{{ action }}" method="get">
+        <textarea name="data" rows="10" cols="50" placeholder="Enter your text here..."></textarea><br><br>
+        <input type="hidden" name="{{ action }}" value="{{ type }}">
+        <input type="submit" value="{{ action|capitalize }}">
+    </form>
+</html>

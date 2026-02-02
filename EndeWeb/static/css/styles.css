@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(255, 255, 255);
+}
+
+div.encodebox {
+    background-color: rgb(8, 4, 22);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+div.decodebox {
+    background-color: rgb(8, 4, 22);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    margin: 20px auto;
+    display: block;
+    background-color: rgb(16, 4, 58);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+form {
+    text-align: center;
+}
+
+.zeplin {
+    color: rgb(71, 255, 246);
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin: 0 auto;  /* Centers the element horizontally */
+    width: fit-content;  /* Shrinks width to content size for centering */
+}
+
+input[type="submit"] {
+    background-color: rgb(71, 255, 246);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    /* Remove align-self: center; as it doesn't apply here */
+}
+
+.tomato {
+    color: rgb(71, 255, 246);
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: rgb(220, 220, 220);
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(200, 200, 200);
+}
+
+.endebox1 {
+    background-color: rgb(16, 4, 58);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.endebox1 :hover {
+    background-color: rgb(32, 8, 116);
+    box-shadow: 0 0 15px rgba(255,255,255,0.7);
+}
