@@ -27,8 +27,7 @@ python3 Ende.py
 ```
 
 
-## 🛠 Skills
-Javascript, HTML, CSS, Linux and Python
+
 ## Usage/Examples
 
 For Ende.sh:
@@ -37,3 +36,4 @@ For Ende.sh:
 ./Ende.sh -d base64 "HelloWorld" # For decoding
 ```
 Type ```Ende.sh -h``` for help.
+
