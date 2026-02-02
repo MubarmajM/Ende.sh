@@ -43,7 +43,7 @@ def main():
         data = input_color("Enter the data to encode: ", "yellow")
         output=subprocess.run(['./Ende.sh', '-e',encoding_type, data])
         print_color(output.stdout, "green")
-        print_color(f"Encoded data: [encoded_data]", "green") 
+        print_color(f"Encoded data: {data}", "green") 
     elif choice == '2':
         print_color("You chose to Decode.", "green")
         print("\n\n")
@@ -73,7 +73,7 @@ def main():
         data = input_color("Enter the data to decode: ", "yellow")
         output=subprocess.run(['./Ende.sh', '-d',decoding_type, data])
         print_color(output.stdout, "green")
-        print_color(f"Decoded data: [decoded_data]", "green")  
+        print_color(f"Decoded data: {data}", "green")  
     else:
         print_color("Invalid choice. Please run the script again.", "red")
 

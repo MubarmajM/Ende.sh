@@ -35,54 +35,42 @@ case $flag in
     case $param in
         base64)
         string=$3
-        echo "Oh, so you want me to decode a Base64 string! Here we go!"
-        sleep 1
-        echo " "
+
         echo "$3" | base64 -d
-        echo " "
-        echo "Bye!"
+
         ;;
 
         binary)
         string=$3
-        echo "Wow, cool! So you want me to deocde a binary. Give me a second..."
-        sleep 1
-        echo " "
+
         echo "$3" | fold -w8 | while read byte; do printf "\\x$(printf '%x' $((2#$byte)))"; done; echo
-        echo " "
+
         ;;
         octal|base8)
         string=$3
-        echo "Base8? Unique! Let's decode this..." 
-        sleep 1
-        echo " "
+
         python3 octal_decode_base8.py -d "$3"
-        echo " "
+
         ;;
         hex|base16)
         string=$3
-        echo "Hexadecimal decoding coming right up!"
-        sleep 1
-        echo " "
+
         echo "$3" | xxd -r -p
-        echo " "
+
         ;;
         url)
         string=$3
-        echo "URL encoding.. UH, decoding... Please wait for a moment."
-        sleep 1
-        echo " "
+
+
         printf '%b' "${string//%/\\x}"
-        echo " "
+
         ;;
 
         rot13)
         string=$3
-        echo "ROT13, here we go!"
-        sleep 1
-        echo " "
+
         echo "$3" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
-        echo " "
+
         ;;
         *)
         echo "NOT available or syntax error, please type $0 --help or $0 -h for help"
@@ -95,56 +83,41 @@ case $flag in
     case $param in
         base64)
         string=$3
-        echo "Oh, so you want me to encode a string into Base64! Here we go!"
-        sleep 1
-        echo " "
+
         echo "$3" | base64 
-        echo " "
-        echo "Bye!"
+
         ;;
 
         binary)
         string=$3
-        echo "Wow, cool! So you want me to encode into binary. Give me a second..."
-        sleep 1
-        echo " "
+
         echo -n "$3" | xxd -b -c 1 | cut -c 10- | tr -d '\n'
-        echo " "
+
         ;;
         octal|base8)
         string=$3
-        echo "Base8? Unique! Let's encode this..." 
-        sleep 1
-        echo " "
+
         python3 octal_decode_base8.py -e "$3"
-        echo " "
+
         ;;
         hex|base16)
         string=$3
-        echo "Hexadecimal encoding coming right up!"
-        sleep 1
-        echo " "
         echo "$3" | xxd -p
-        echo " "
-        echo "Goodbye"
+
         ;;
         url)
         string=$3
-        echo "URL encoding... Please wait for a moment."
-        sleep 1
-        echo " "
+
         python3 -c "from urllib.parse import quote; print(quote('$3'))"
-        echo " "
+
         ;;
 
         rot13)
         string=$3
-        echo "ROT13, here we go!"
-        sleep 1
-        echo " "
+  
         echo "$3" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
-        echo " "
+
         ;;
         *)
         echo "NOT available or syntax error, please type $0 --help or $0 -h for help"
