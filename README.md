@@ -8,7 +8,7 @@ A Bash Script for Encoding/Decoding strings.
 
 ## Installation
 
-Install my-project with npm
+ Clone my procet and install rquirements
 
 ```bash
   git clone https://github.com/MubarmajM/Ende.sh.git
